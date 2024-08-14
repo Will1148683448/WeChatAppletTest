@@ -1,0 +1,80 @@
+
+/****************** 颜色 *********************/
+
+// 预约时间条色值
+$legend-nomal: #F6F6F6; //可预约
+$legend-grey: #D1D1D1; //已预约
+$legend-self: #2A815188; //已选择
+$progress-unit-line: #AAAAAA; //刻度
+
+/****************** 组件样式 *********************/
+
+// 主按钮
+.primary-button {
+    width: 622rpx;
+    height: 96rpx;
+    background: $theme;
+    border-radius: 8rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28rpx;
+    color: #fff;
+}
+
+//边框按钮
+.border-button {
+    width: 622rpx;
+    height: 96rpx;
+    border-radius: 8rpx;
+    border: 1px solid $theme;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28rpx;
+    color: $theme;
+}
+
+// 订单小按钮
+.order-small-button {
+    // min-width: 120rpx;
+    height: 64rpx;
+    background: $theme;
+    border-radius: 8rpx;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 28rpx;
+    color: #FFFFFF;
+
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+}
+
+// 横线样式
+.line {
+    border-bottom: #E5E5E5 1px solid;
+    width: 100%;
+}
+
+// 虚线
+.line-dash {
+    border-bottom: #E5E5E5 1px dotted;
+    width: 100%;
+}
+
+// 文本右对齐输入框
+.right-input {
+	text-align: right;
+	flex: 1;
+}

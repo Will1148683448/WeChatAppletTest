@@ -1,0 +1,112 @@
+/****************** 样式抹平 *********************/
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+/****************** 颜色 *********************/
+
+// 主题颜色
+$theme: #2A8151;
+$page-bg-white: #FFFFFF;
+$page-bg-gray: #F3F3F3;
+
+// 默认页面背景色
+page {
+    background: $page-bg-gray;
+    min-height: 100%;
+}
+
+.gray-999 {
+    color: #999999;
+}
+
+.black-333 {
+    color: #333333;
+}
+
+/****************** unocss-字号样例 *********************/
+/**
+//字号
+font-size-60
+f-60
+
+//字体粗细
+fw-600
+*/
+
+/****************** unocss-flex布局样例 *********************/
+/**
+flex
+flex-col
+flex-justify-center
+flex-items-center
+*/
+
+/****************** unocss-布局尺寸样例 *********************/
+/**
+// 尺寸
+w-100
+h-100
+w-100%
+h-100%
+
+// 外边距
+m-100
+m-t-100
+m-b-100
+m-l-100
+m-r-100
+m-h-100
+m-v-100
+
+// 内边距
+p-100
+p-t-100
+p-b-100
+p-l-100
+p-r-100
+p-h-100
+p-v-100
+
+// 定位
+pos-absolute
+pos-relative
+pos-fixed
+pos-sticky
+t-100
+b-100
+l-100
+r-100
+
+//切圆角
+radius-16
+radius-t-16
+
+//强制文本行数，末尾加省略号
+text-cut-1
+*/
+
+/****************** 组合样式 *********************/
+
+// 安全底部
+.safe-footer {
+    width: 100%;
+    height: calc(60px + env(safe-area-inset-bottom));
+    background: none;
+}
+
+//定位
+.pos-cc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

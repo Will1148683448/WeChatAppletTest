@@ -1,0 +1,139 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // uni-ui 规则如下配置
+      // "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+      // "^kr-(.*)": "@/components/kr-$1.vue" // 自定义组件
+    }
+  },
+  "pages": [
+    // ******************** tab首页 ********************
+    {
+      "path": "pages/tab/tabHome/index",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    // ******************** tab订单列表 ********************
+    {
+      "path": "pages/tab/tabOrder/index",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+
+    // ******************** tab我的 ********************
+    {
+      "path": "pages/tab/tabUserCenter/index",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+
+    // ******************** 测试页 ********************
+    {
+      "path": "pages/test/index",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  //分包
+  "subPackages": [
+    //********************登录相关分包********************
+    {
+      "root": "pages/subLogin",
+      "pages": [
+        // 授权登录(微信手机号授权登录)
+        {
+          "path": "authLogin/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // 手机号登录
+        {
+          "path": "authPhone/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // 用户协议
+        {
+          "path": "loginAgreement/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // 隐私政策
+        {
+          "path": "privacyAgreement/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    }
+  ],
+  // 预加载分包
+  "preloadRule": {
+    "pages/tab/tabHome/index": {
+      "network": "all",
+      "packages": ["pages/subLogin", "pages/subBusiness"]
+    },
+    // 扫码进入优惠券列表
+    "pages/subOrder/coupon/couponList/index": {
+      "network": "all",
+      "packages": [
+        "__APP__",
+        "pages/subLogin",
+        "pages/subOrder",
+        "pages/subUser"
+      ]
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#2A8151",
+    "list": [
+      {
+        "pagePath": "pages/tab/tabHome/index",
+        "text": "首页",
+        "iconPath": "static/imgs/tabBar/tab_0_nor.png",
+        "selectedIconPath": "static/imgs/tabBar/tab_0_sel.png"
+      },
+
+      {
+        "pagePath": "pages/tab/tabOrder/index",
+        "text": "订单",
+        "iconPath": "static/imgs/tabBar/tab_1_nor.png",
+        "selectedIconPath": "static/imgs/tabBar/tab_1_sel.png"
+      },
+      {
+        "pagePath": "pages/tab/tabUserCenter/index",
+        "text": "我的",
+        "iconPath": "static/imgs/tabBar/tab_2_nor.png",
+        "selectedIconPath": "static/imgs/tabBar/tab_2_sel.png"
+      }
+    ]
+  }
+}
